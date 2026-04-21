@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "hesabu-agent"
+version = "0.1.0"
+description = "CrewAI multi-agent Kenya budget analysis"
+license = "CC-BY-NC-ND-4.0"
+authors = [{name = "Gabriel Mahia", email = "contact@aikungfu.dev"}]
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crew*"]
