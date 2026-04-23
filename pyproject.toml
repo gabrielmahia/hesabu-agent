@@ -6,7 +6,7 @@ build-backend = "setuptools.backends.legacy:build"
 name = "hesabu-agent"
 version = "0.1.0"
 description = "CrewAI multi-agent Kenya budget analysis"
-license = "CC-BY-NC-ND-4.0"
+license = "MIT"
 authors = [{name = "Gabriel Mahia", email = "contact@aikungfu.dev"}]
 requires-python = ">=3.10"
 dependencies = ["pandas>=2.0.0"]
