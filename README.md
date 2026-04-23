@@ -2,7 +2,7 @@
 
 > Multi-agent AI system for analysing Kenya county budget execution. Built on [CrewAI](https://github.com/crewaiinc/crewai) — correlates Controller of Budget absorption data with OCDS procurement contracts.
 
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://python.org)
 [![Built on CrewAI](https://img.shields.io/badge/Built%20on-CrewAI-orange)](https://crewai.com)
 
@@ -80,6 +80,6 @@ CrewAI's role-based agent model matches how budget accountability actually works
 ## IP & Collaboration
 
 © 2026 Gabriel Mahia · [contact@aikungfu.dev](mailto:contact@aikungfu.dev)
-License: CC BY-NC-ND 4.0
+License: MIT
 Data: OCDS Kenya (Open Contracting Partnership), Controller of Budget Kenya.
 Not affiliated with any county government or the Controller of Budget.
