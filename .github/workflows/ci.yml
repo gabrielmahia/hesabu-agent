@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install deps
-        run: pip install --upgrade pip ruff pytest crewai pandas
+        run: pip install --upgrade pip ruff==0.16.4 pytest crewai pandas
       - name: Lint
         run: ruff check . --ignore E501
       - name: Smoke test

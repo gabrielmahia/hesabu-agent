@@ -2,8 +2,10 @@
 HesabuAgent — Streamlit interface for county budget analysis crew.
 """
 import os
+
 import streamlit as st
 from dotenv import load_dotenv
+
 load_dotenv()
 
 st.set_page_config(page_title="HesabuAgent", page_icon="💰", layout="centered")
@@ -32,6 +34,7 @@ if submit:
     with st.spinner(f"Running HesabuAgent crew for {county}..."):
         try:
             from crewai import Crew, Task
+
             from crew.agents import build_crew_agents
 
             budget_analyst, procurement_analyst, report_writer = build_crew_agents()
@@ -58,7 +61,7 @@ if submit:
             st.write(str(result))
         except ImportError:
             st.error("CrewAI not installed. Run: pip install crewai")
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - UI boundary: any crew failure is shown to the user instead of crashing the app
             st.error(f"Crew run failed: {e}")
 
 st.divider()

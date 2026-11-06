@@ -2,9 +2,10 @@
 HesabuAgent tools — COB data loader and OCDS query client.
 """
 import os
+from pathlib import Path
+
 import httpx
 import pandas as pd
-from pathlib import Path
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field
 
@@ -63,5 +64,5 @@ class OCDSQueryTool(BaseTool):
                 timeout=15
             )
             return r.text[:2000]  # truncate for agent context window
-        except Exception as e:
-            return f"OCDS query failed: {str(e)}"
+        except Exception as e:  # noqa: BLE001 - tool boundary: any failure becomes a message the agent can read
+            return f"OCDS query failed: {e!s}"
